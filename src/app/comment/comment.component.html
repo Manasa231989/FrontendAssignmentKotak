@@ -1,0 +1,17 @@
+<div class="container">
+    @if(comments.text){
+        <div class="d-flex sub-comments">
+            <span><i class="fa-solid fa-user"></i></span>{{comments.text}}
+        </div>
+    }
+   
+    @for(subComment of comments; track subComment){
+        @if(subComment.children.length > 1){
+            @for (item of subComment.children; track item) {
+                <div class="d-flex sub-comments">
+                    <span><i class="fa-solid fa-user"></i></span>{{item.text}}
+                </div>
+            }
+        }
+    }
+</div>

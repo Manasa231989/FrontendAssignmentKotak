@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>Post Details </h3>
+    <div class="group">
+        <label for="" class="label">Title: </label>
+        <div>{{postDetails?.title}}</div>
+    </div>
+    <div class="group">
+        <label for="" class="label">Points</label>
+        <div>{{postDetails?.points}}</div>
+    </div>
+    <div class="coment-section">
+        <label for="" class="label">Comments</label>
+        @for(comment of postDetails?.children; track comment){
+            <div class="comment-container card">     
+                <div class="comments d-flex">
+                    <span><i class="fa-solid fa-user"></i></span>{{comment.text}}</div>
+                @if(comment?.children.length > 1){
+                    <div class="sub-comments">
+                        <app-comment [comments]="comment?.children"></app-comment>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

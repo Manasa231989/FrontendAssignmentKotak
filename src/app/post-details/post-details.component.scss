@@ -1,0 +1,26 @@
+.container{
+    margin: 50px;
+    display: grid;
+    gap: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.group{
+    display: flex;
+    gap: 30px;
+}
+.comment-container{
+    border-bottom: 1px solid var(--primary-color);
+}
+.comments{
+    gap: 30px;
+    display: grid;
+    padding: 19px;
+}
+
+.sub-comments{
+    padding: 20px 0px;
+}
